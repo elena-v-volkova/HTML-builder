@@ -14,9 +14,11 @@ async function showFiles(currentPath) {
           `${file.name} - ${file.name.slice(lastIndex + 1)} - ${stats.size}b`,
         );
       });
-    } else {
-      await showFiles(path.join(currentPath, file.name));
     }
+    // else {
+    //   return;
+    // await showFiles(path.join(currentPath, file.name));
+    // }
   }
 }
 showFiles(filePath);
